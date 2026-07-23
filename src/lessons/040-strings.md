@@ -17,7 +17,7 @@ hahaha
 
 ## Methods
 
-Everything in Raku is an object, so strings answer to methods — call them with
+Like every value in Raku, a string carries its own methods — call them with
 the dot:
 
 ```raku
@@ -54,19 +54,19 @@ Today's word, backwards: ukaR
 
 ## Try it
 
-Print your name in uppercase *and* reversed — `MADAM` stays suspiciously
+Print your name in uppercase *and* reversed — `ANNA` stays suspiciously
 readable both ways.
 
 ```raku exercise
-my $name = 'Madam';
+my $name = 'Anna';
 ```
 
 ```solution
-my $name = 'Madam';
+my $name = 'Anna';
 say $name.uc;
 say $name.uc.flip;
 ```
 ```output
-MADAM
-MADAM
+ANNA
+ANNA
 ```
