@@ -1,5 +1,7 @@
 # raku-tour — A Tour of Raku
 
+▶ **Take the tour: [tour.raku.online](https://tour.raku.online/)**
+
 An interactive introduction to the Raku language: 18 short lessons, each built
 around live code. **Every example is an editable, runnable editor in the
 browser** — powered by [Raku++](https://github.com/ash/rakupp) compiled to
