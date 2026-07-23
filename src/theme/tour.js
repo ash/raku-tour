@@ -39,6 +39,29 @@
     }
   }
 
+  // Reset progress — shown whenever any lesson is ticked; asks for a second
+  // click (the label changes) instead of popping a dialog.
+  var reset = document.getElementById('btn-reset');
+  if (reset) {
+    var anyDone = TOUR.order.some(function (s) { return done[s]; });
+    reset.hidden = !anyDone;
+    var armed = false;
+    reset.addEventListener('click', function () {
+      if (!armed) {
+        armed = true;
+        reset.textContent = 'Really reset?';
+        reset.classList.add('armed');
+        return;
+      }
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      document.querySelectorAll('a[data-slug].done').forEach(function (a) {
+        a.classList.remove('done');
+      });
+      if (cont) cont.hidden = true;
+      reset.hidden = true;
+    });
+  }
+
   // ←/→ walk the tour — but never while typing in an editor or input.
   document.addEventListener('keydown', function (e) {
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;

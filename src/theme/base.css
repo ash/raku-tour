@@ -843,4 +843,17 @@ details.solution[open] > summary { margin-bottom: .6rem; }
 .btn-start:hover { text-decoration: none; filter: brightness(1.08); }
 .btn-continue { border: 1px solid var(--border); color: var(--fg); }
 .btn-continue:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
+.btn-reset {
+  border: none;
+  background: none;
+  padding: .55rem 0;
+  font: inherit;
+  font-size: .85rem;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.btn-reset:hover, .btn-reset.armed { color: var(--accent); }
+.btn-reset[hidden] { display: none; }
 .ov-list a { display: flex; align-items: baseline; gap: .3rem; }

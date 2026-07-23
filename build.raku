@@ -542,7 +542,8 @@ sub render-home(%site, @lessons --> Str) {
         "<p class=\"hero-stats\">{@lessons.elems} lessons · every example editable, runnable, " ~
         "and verified against the interpreter</p>" ~
         "<p class=\"hero-links\"><a class=\"btn-start\" href=\"/{$first.slug}/\">Start the tour →</a>" ~
-        "<a class=\"btn-continue\" id=\"btn-continue\" href=\"\" hidden></a></p>" ~
+        "<a class=\"btn-continue\" id=\"btn-continue\" href=\"\" hidden></a>" ~
+        "<button class=\"btn-reset\" id=\"btn-reset\" type=\"button\" hidden>Reset progress</button></p>" ~
         '</div>';
 
     @parts.push('<div class="overview">');
